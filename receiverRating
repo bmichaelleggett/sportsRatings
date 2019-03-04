@@ -26,6 +26,6 @@ def receiverRating(receptions, yards, touchdowns, targetPercentage, games):
 
 	return rating
 	
-calvinJohnson = receiverRating(122, 1964, 5, 59.8, 16)
+calvinJohnson2012 = receiverRating(122, 1964, 5, 59.8, 16)
 
-print(calvinJohnson)
+print(calvinJohnson2012)
