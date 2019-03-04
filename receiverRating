@@ -1,0 +1,31 @@
+def receiverRating(receptions, yards, touchdowns, targetPercentage, games):
+	
+	receptionAverage = receptions / games
+	parameter_one = receptionAverage * .323
+	
+	if parameter_one > 3.75:
+	  parameter_one = 3.75
+  
+  yardsAverage = yards / games
+	parameter_two = yardsAverage * .023
+	
+	if parameter_two > 3.75:
+	  parameter_two = 3.75
+
+  touchdownAverage = touchdowns / games
+	parameter_three = touchdownAverage * 1.2
+	
+	if parameter_three > 3.75:
+	  parameter_three = 3.75
+
+	preRating = (parameter_one + parameter_two + parameter_three) * 11
+	
+	finalFactor = targetPercentage / 100
+	
+	rating = (preRating * finalFactor) * 5
+
+	return rating
+	
+calvinJohnson = receiverRating(122, 1964, 5, 59.8, 16)
+
+print(calvinJohnson)
